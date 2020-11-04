@@ -13,7 +13,7 @@ server.use(morgan())
 server.use(cors())
 server.use(express.json())
 
-server.use('/api/router', router)
+server.use('/api/cars', router)
 
 server.get('/test', (req,res)=>{ 
     res.send('endpoint smoking')

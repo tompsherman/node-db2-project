@@ -4,7 +4,7 @@ const db = require('../data/config')
 
 router.get('/', (req,res)=>{ 
     db('cars')
-    .then(data => res.status(200).json({message: "hello chap"}))
+    .then(data => res.status(200).json(data))
     .catch(error => res.status(500).json({message: `${error.message}; ${error.stack}`}))
  })
 

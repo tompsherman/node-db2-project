@@ -12,7 +12,7 @@ router.get('/', (req,res)=>{
      const carData = req.body 
      db('cars').insert(carData)
      .then(car=>{
-         db('cars').where({id: car[0]})
+         db('cars').where({id})
          .then(newCar =>{
             res.status(201).json(newCar)
          })
